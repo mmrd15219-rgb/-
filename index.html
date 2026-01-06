@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سوق الخضروات المنزلي</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">سوق الخضروات <span class="logo-sm">المنزلي</span></div>
+  <div class="top-actions">
+    <button id="shareBtn" class="btn primary">📤 مشاركة</button>
+    <button id="rateBtn" class="btn">⭐ تقييم</button>
+    <button id="callBtn" class="btn">📞 اتصل بنا</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="catalog">
+    <h2>🥬 الخضروات</h2>
+    <div id="vegProducts" class="product-grid"></div>
+
+    <h2 style="margin-top:20px">🍎 الفواكه</h2>
+    <div id="fruitProducts" class="product-grid"></div>
+  </section>
+
+  <aside class="cart">
+    <h3>السلة الذكية</h3>
+    <div id="cartItems" class="cart-items">السلة فارغة</div>
+
+    <div class="cart-summary">
+      <div>المجموع: <span id="cartTotal">0</span> د.ع</div>
+
+      <div class="customer-info">
+        <input type="text" id="custName" placeholder="اسمك">
+        <input type="text" id="custPhone" placeholder="رقم الهاتف">
+        <input type="text" id="custAddress" placeholder="وصف الموقع">
+      </div>
+
+      <button id="sendOrderBtn" class="btn primary">📦 إرسال الطلب</button>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  <small>تطبيق تجريبي لسوق خضروات منزلي</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

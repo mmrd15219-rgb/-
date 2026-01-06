@@ -1,0 +1,162 @@
+:root{
+  --green:#1f8f4c;
+  --accent:#3ac56b;
+  --bg:#eaffef;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Tahoma, sans-serif;
+  direction:rtl;
+  padding:16px;
+  background:
+    radial-gradient(circle at top right,#b6f7c1,transparent 40%),
+    radial-gradient(circle at bottom left,#8fe3a0,transparent 40%),
+    linear-gradient(180deg,#eaffef,#d6f5de);
+}
+
+/* ===== الشريط العلوي ===== */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,#1f8f4c,#49c96d);
+  padding:10px;
+  border-radius:14px;
+}
+
+.logo{
+  color:white;
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+.top-actions{
+  display:flex;
+  gap:8px;
+}
+
+/* ===== الأزرار ===== */
+.btn{
+  padding:8px 12px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,#1f8f4c,#3ac56b);
+  color:white;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== التخطيط العام ===== */
+.container{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:16px;
+  margin-top:16px;
+}
+
+.catalog,.cart{
+  background:white;
+  border-radius:14px;
+  padding:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ===== شبكة المنتجات (عام) ===== */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:12px;
+  justify-items:center;
+}
+
+/* ===== ترتيب خاص للفواكه ===== */
+#fruitProducts{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(140px, 1fr));
+  gap:12px;
+  justify-content:center;
+  justify-items:center;
+  margin:0 auto;
+  max-width:360px; /* يخليها بوسط الشاشة */
+}
+
+/* ===== كرت المنتج ===== */
+.card{
+  text-align:center;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #e0f2e6;
+  transition:.25s;
+  width:100%;
+  max-width:160px;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.veg-emoji{
+  font-size:78px;
+  animation:float 2.8s infinite;
+}
+
+@keyframes float{
+  50%{transform:translateY(-6px)}
+}
+
+.added-msg{
+  color:green;
+  font-weight:600;
+  margin-top:4px;
+  display:none;
+}
+
+/* ===== السلة ===== */
+.cart-items{
+  max-height:300px;
+  overflow:auto;
+  margin-bottom:10px;
+}
+
+.cart-row{
+  background:#f1fff4;
+  padding:8px;
+  border-radius:8px;
+  margin-bottom:6px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:6px;
+}
+
+.cart-row button{
+  padding:2px 6px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+}
+
+/* ===== معلومات الزبون ===== */
+.customer-info input{
+  width:100%;
+  margin-bottom:6px;
+  padding:6px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* ===== الفوتر ===== */
+.footer{
+  text-align:center;
+  margin-top:20px;
+  color:#356b4f;
+}
